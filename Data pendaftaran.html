@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Pendaftaran Santri Baru | Hidayatul Mubtadiin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --hijau:#0b8457;
+  --biru:#0f4c75;
+  --putih:#ffffff;
+  --abu:#f4f6f8;
+  --border:#d9e2ec;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Poppins',system-ui;
+  background:var(--abu);
+  color:#333;
+}
+
+/* ===== HERO ===== */
+.hero{
+  background:linear-gradient(135deg,var(--hijau),var(--biru));
+  color:white;
+  padding:90px 20px;
+  text-align:center;
+}
+.hero h1{margin:0;font-size:36px}
+.hero p{max-width:700px;margin:16px auto 28px}
+.hero a{
+  display:inline-block;
+  padding:14px 36px;
+  background:white;
+  color:var(--biru);
+  border-radius:999px;
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* ===== SECTION ===== */
+section{
+  padding:70px 20px;
+  background:white;
+  border-top:2px dashed var(--border);
+}
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+.title{
+  text-align:center;
+  margin-bottom:40px;
+}
+.title h2{
+  margin:0;
+  font-size:28px;
+  color:var(--biru);
+}
+.title p{color:#666;margin-top:8px}
+
+/* ===== PROFIL ===== */
+.profil-box{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:34px;
+  line-height:1.9;
+}
+
+/* ===== GALERI ===== */
+.galeri{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.galeri img{
+  width:100%;
+  height:auto;
+  border-radius:18px;
+  border:1px solid var(--border);
+  object-fit:contain;
+  background:#fff;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  transition:transform .3s;
+}
+.galeri img:hover{
+  transform:scale(1.03);
+}
+
+/* ===== FORM ===== */
+form{
+  max-width:700px;
+  margin:auto;
+  background:white;
+  padding:34px;
+  border-radius:20px;
+  border:1px solid var(--border);
+}
+.form-group{margin-bottom:18px}
+form label{
+  display:block;
+  margin-bottom:6px;
+  font-weight:500;
+}
+form input, form textarea{
+  width:100%;
+  padding:12px 14px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  font-size:14px;
+}
+form button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--hijau),var(--biru));
+  color:white;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#f1f4f7;
+  text-align:center;
+  padding:28px;
+  font-size:14px;
+  border-top:1px solid var(--border);
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .hero h1{font-size:26px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Pondok Pesantren Hidayatul Mubtadiin</h1>
+  <p>Pendaftaran Santri Baru Tahun Ajaran Baru</p>
+  <a href="#daftar">Daftar Sekarang</a>
+</div>
+
+<!-- PROFIL -->
+<section>
+  <div class="container">
+    <div class="title">
+      <h2>Profil Pondok</h2>
+      <p>Tentang Pondok Pesantren</p>
+    </div>
+    <div class="profil-box">
+      Pondok Pesantren Hidayatul Mubtadiin adalah lembaga pendidikan Islam
+      yang membina santri dalam ilmu agama dan umum, berlandaskan akhlakul
+      karimah serta nilai-nilai keislaman.
+    </div>
+  </div>
+</section>
+
+<!-- GALERI -->
+<section>
+  <div class="container">
+    <div class="title">
+      <h2>Dokumentasi Kegiatan Pondok</h2>
+      <p>Suasana dan aktivitas santri</p>
+    </div>
+
+    <div class="galeri">
+      <img src="IMG-20251229-WA0003.jpg" alt="Dokumentasi Pondok 1">
+      <img src="foto2.jpg" alt="Dokumentasi Pondok 2">
+      <img src="foto3.jpg" alt="Dokumentasi Pondok 3">
+      <img src="foto4.jpg" alt="Dokumentasi Pondok 4">
+    </div>
+  </div>
+</section>
+
+<!-- FORM PENDAFTARAN -->
+<section id="daftar">
+  <div class="container">
+    <div class="title">
+      <h2>Form Pendaftaran Santri Baru</h2>
+      <p>Isi data dengan benar</p>
+    </div>
+
+    <form id="formDaftar">
+      <div class="form-group">
+        <label>Nama Lengkap</label>
+        <input type="text" name="nama" required>
+      </div>
+
+      <div class="form-group">
+        <label>NIK</label>
+        <input type="text" name="nik" required>
+      </div>
+
+      <div class="form-group">
+        <label>Tempat Lahir</label>
+        <input type="text" name="tempat_lahir" required>
+      </div>
+
+      <div class="form-group">
+        <label>Tanggal Lahir</label>
+        <input type="date" name="tanggal_lahir" required>
+      </div>
+
+      <div class="form-group">
+        <label>Alamat Lengkap</label>
+        <textarea name="alamat" rows="3" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Nama Wali</label>
+        <input type="text" name="nama_wali" required>
+      </div>
+
+      <div class="form-group">
+        <label>No HP / WhatsApp</label>
+        <input type="tel" name="no_hp" required>
+      </div>
+
+      <button type="submit">Kirim Pendaftaran</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+© Pondok Pesantren Hidayatul Mubtadiin
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+const scriptURL = "PASTE_URL_WEB_APP_APPS_SCRIPT_DI_SINI";
+
+document.getElementById("formDaftar").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const form = e.target;
+  const data = {
+    nama: form.nama.value,
+    nik: form.nik.value,
+    tempat_lahir: form.tempat_lahir.value,
+    tanggal_lahir: form.tanggal_lahir.value,
+    alamat: form.alamat.value,
+    nama_wali: form.nama_wali.value,
+    no_hp: form.no_hp.value
+  };
+
+  fetch(scriptURL, {
+    method: "POST",
+    body: JSON.stringify(data)
+  })
+  .then(res => res.json())
+  .then(() => {
+    alert("✅ Pendaftaran berhasil dikirim!");
+    form.reset();
+  })
+  .catch(() => {
+    alert("❌ Gagal mengirim data");
+  });
+});
+</script>
+
+</body>
+</html>
